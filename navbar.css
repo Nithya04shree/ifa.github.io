@@ -34,7 +34,7 @@
 .border:hover{
     border: 1.5px solid #800f2f;
 }
-.home,.auction,.buying,.supplying,.pricing,.contact,.logo,.login{
+.home,.auction,.buying,.supplying,.contact,.logo,.login{
     text-decoration: none;
     color: #590d22;
     align-content: center;
