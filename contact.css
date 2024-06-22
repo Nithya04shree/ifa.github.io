@@ -1,16 +1,10 @@
-.contactus{
-    display: flex;
-    justify-content: space-around;
-}
-.firstbox,.secondbox{
+
+.firstbox{
     background-color: white;
     width: 40%;
     height: 500px;
     color: #a4133c;
     margin: 1% ;
-}
-.secondbox{
-    height: 600px;
 }
 #contact,#general{
     font-size: 2rem;
@@ -21,19 +15,7 @@
     font-size: 1.25rem;
     margin: 4% 5% 5% 5%;
 }
-#name,#email,#number,#message,#submit{
-    width: 60%; 
-    height: 45px; 
-    font-size: 1.25rem; 
-    color: #800f2f;
-    margin-left: 5%;
-    background-color: #fff0f3;
-    border: transparent;
-}
-#submit{
-    width: 20%;
-    background-color: #ffb3c1;
-}
+
 .cont{
     display: flex;
     margin-left: 2%;
