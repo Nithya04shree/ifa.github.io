@@ -19,19 +19,19 @@
     background-color: white;
     margin-top: 5%;
 }
-.username,.pwd{
-    margin-left: 90px;
+.fullname,.email,.role{
+    margin-left: 18%;
     margin-top: 50px;
     font-size: 1.5rem;
     color: #a4133c;
     font-weight: bold;
 }
-#username,#password,#submit{
+#fullname,#email,#submit,#role{
     width: 40%;
     height: 40px;
     border: transparent;
     background-color: #fff0f3;
-    margin-left: 90px;
+    margin-left: 20%;
     font-size: 1.5rem;
     color: #800f2f;
 }
@@ -39,25 +39,8 @@
     width: 20%;
     font-weight: bold;
     font-size: 1.7rem;
-    margin-left: 145px;
+    margin-left: 30%;
 }
 #back{
     color: #590d22;
-}
-#sign{
-    margin-left: 145px;
-    font-size: 1.2rem;
-    align-items: center;
-    color: #590d22;
-    border: none;
-}
-#buton{
-    width: 20%;
-    height: 30px;
-    font-weight: bold;
-    font-size: 1.7rem;
-    margin-left: 145px;
-    color: #800f2f;
-    border: none;
-    background-color: #fff0f3;
 }
