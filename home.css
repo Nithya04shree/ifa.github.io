@@ -1,13 +1,21 @@
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffb3c1;
+}
 .backimg{
     background-image: url("homepgimg.jpg");
     height: 600px;
     background-size: cover;
-    font-size: 4rem;
+    font-size: 5rem;
     color: white;
     align-content: center;
     text-align: center;
     text-indent: 2%;
 }
+
 .box1{
     display: flex;
     justify-content:space-around;
