@@ -15,21 +15,17 @@
         <div class="box1">
             <a href="home.html" id="back"><i class="fa-solid fa-arrow-left"></i></a>
             <p>LOGIN</p>
-            <div class="icon">
-                
-            </div>
+            
         </div>
         <div class="box2">
-            <form>
-                <p class="username">Username</p>
-                <input type="text" id="username" required>
-                <p class="pwd">Password</p>
-                <input type="password" id="password" required><br><br><br><br>
+            <form action="http://localhost/dbms/login.php" method="POST">
+                <p class="fullname">FullName</p>
+                <input type="text" id="fullname" name="fullname" required>
+                <p class="email">EmailId</p>
+                <input type="email" id="email" name="email" required>
+                <p class="role">Role</p>
+                <input type="text" id="role" name="role" required><br><br><br><br>
                 <button type="submit" id="submit">LOGIN</button>
-            </form>
-            <form>
-                <p id="sign">Didn't Sign up?</p>
-                <button type="submit" id="buton">SignUp</button>
             </form>
         </div>
     </div>
