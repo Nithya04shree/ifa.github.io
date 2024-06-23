@@ -1,0 +1,79 @@
+/* .box{
+    display: flex;
+    
+}
+.leftbox{
+    height: 580px;
+    width: 28%;
+    background-color: #590d22;
+    color: #fff0f3;
+}
+#l1{
+    font-size: 4rem;
+    color: #ffb3c1;
+    margin-top: 4%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border: 2px solid #ffccd5;
+    padding-left: 20%;
+}
+#l2{
+    font-size: 2.3rem;
+    margin: 10% 3% 10% 10%;
+    padding-bottom: 3%;
+    border-bottom: 2px solid #ffccd5;
+}
+#logout{
+    font-size: 2rem;
+    position: relative;
+    top: 80%;
+    right: 230%;
+    height: 40px;
+    background-color: #590d22;
+    color: #fff0f3;
+}
+
+.rightbox{
+    background-color: #ffb3c1;
+    width: 70%;
+    margin-left: -7%;
+} 
+*/
+.box{
+    display: flex;
+}
+.leftbox{
+    height: 580px;
+    width: 30%;
+    background-image: url("backauction.jpg");
+    
+}
+.heading{
+    font-size: 4rem;
+    margin-top: 0%;
+    color: #420a1a;
+    padding-top: 3%;
+    padding-left: 18%;
+    border: 4px solid #f9d6d6;
+    font-weight: BOLDER;
+}
+.box1{
+    padding-top: 12%;
+}
+#l1,#l2,#l3{
+    font-size: 3rem;
+    text-decoration: none;
+    text-decoration: underline #f9d6d6 0.2rem;
+    color: #fcfcfc;
+    margin: 5% 5% 5% 5%;
+}
+#logout{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    border: 2px solid rgb(55, 12, 12);
+    padding: 3% 3% 3% 3%;
+    position: relative;
+    top: 25%;
+    left: 30%;
+}
