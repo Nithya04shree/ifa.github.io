@@ -20,6 +20,52 @@
             <a href="http://localhost/dbms/home.html" id="logout">LOGOUT</a>
         </div>
         <div class="rightbox">
+        <!-- query 8-->
+        <!-- Query to get total annual sales per year -->
+        <p id="head">Total Annual Sales</p>
+        <canvas id="annualSalesChart"width="300" height="300"></canvas>
+        <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "ifa";
+    
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+    
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        $query = "SELECT YEAR(a.endTime) AS Year, SUM(a.highestBid) AS TotalSales
+                  FROM auctions a
+                  WHERE a.STATUS = 'COMPLETED'
+                  GROUP BY YEAR(a.endTime)
+                  ORDER BY Year";
+
+        $result = $conn->query($query);
+
+        $years = [];
+        $totalSales = [];
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $years[] = $row["Year"];
+                $totalSales[] = $row["TotalSales"];
+            }
+        } else {
+            echo "0 results";
+        }
+
+        $conn->close();
+        ?>
+        <!-- end query 8 -->
+
+        <br><br>
+
+        <!-- query 4 -->
+        <!-- find average starting price of varieties by flower -->
         <?php
         $servername = "localhost";
         $username = "root";
@@ -53,5 +99,56 @@
         ?>
         </div>
     </div>
+    <script>
+    const ctx = document.getElementById('annualSalesChart').getContext('2d');
+    const annualSalesChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: <?php echo json_encode($years); ?>,
+            datasets: [{
+                label: 'Total Sales',
+                data: <?php echo json_encode($totalSales); ?>,
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: false,
+            plugins: {
+                legend: {
+                    position: 'top',
+                },
+                
+            }
+        }
+    });
+    </script>
 </body>
 </html>
