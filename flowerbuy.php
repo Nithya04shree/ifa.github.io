@@ -20,6 +20,8 @@
             <a href="http://localhost/dbms/home.html" id="logout">LOGOUT</a>
         </div>
         <div class="rightbox">
+        <!-- query 1 -->
+         <!-- most popular flower variety -->
         <h2>Most Popular Flower Variety</h2>
     <canvas id="popularFlowerChart" width="150" height="75"></canvas>
     
@@ -57,6 +59,7 @@
     }
     $conn->close();
     ?>
+    <!-- end query 1 -->
         </div>
     </div>
     <script>
